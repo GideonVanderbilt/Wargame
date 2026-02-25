@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Territory Game Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">Territory Prototype</div>
+      <div id="hud" class="hud">
+        <div><span class="label">Turn:</span> <span id="turnLabel">1</span></div>
+        <div><span class="label">Active:</span> <span id="activeFactionLabel">—</span></div>
+        <div><span class="label">Selected:</span> <span id="selectedLabel">—</span></div>
+      </div>
+      <div class="actions">
+        <button id="endTurnBtn" type="button">End Turn</button>
+        <button id="newWorldBtn" type="button">New World</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="stage">
+        <canvas id="gameCanvas" width="1000" height="650"></canvas>
+        <div class="hint">
+          Click a territory to select it. End Turn rotates factions.
+        </div>
+      </section>
+
+      <aside class="panel">
+        <h2>Factions</h2>
+        <div id="factionList" class="factionList"></div>
+        <h2>Log</h2>
+        <div id="log" class="log"></div>
+      </aside>
+    </main>
+
+    <script src="world.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
